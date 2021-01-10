@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div class="login">
+   <h1>League Index Predictor</h1>
+    <form action="{{ url_for('predict')}}" method="post">
+      <label for="apm" colo>APM:  </label>
+      <input type="text" name="apm" placeholder="apm" value="150" required="required">
+      <br>
+      <br>
+      <label for="selectbyhotkeys">SelectByHotkeys:  </label>
+      <input type="text" name="selectbyhotkeys" placeholder="selectbyhotkeys" value="0.0040" required="required">
+      <br>
+      <br>
+      <label for="assigntohotkeys">AssignToHotkeys:  </label>
+      <input type="text" name="assigntohotkeys" placeholder="assigntohotkeys" value="0.0005" required="required">
+      <br>
+      <br>
+      <label for="uniquehotkeys">UniqueHotkeys:  </label>
+      <select id="uniquehotkeys" name="uniquehotkeys", placeholder="uniquehotkeys", required="required">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <br>
+      <br>
+      <label for="minimapattacks">MinimapAttacks:  </label>
+      <input type="text" name="minimapattacks" placeholder="minimapattacks" value="0.0002" required="required">
+      <br>
+      <br>
+      <label for="minimaprighclicks">MinimapRightClicks:  </label>
+      <input type="text" name="minimaprighclicks" placeholder="minimaprighclicks" value="0.0005" required="required">
+      <br>
+      <br>
+      <label for="numberofpacs">NumberOfPACs:  </label>
+      <input type="text" name="numberofpacs" placeholder="numberofpacs" value="0.005" required="required">
+      <br>
+      <br>
+      <label for="gapbetweenpacs">GapBetweenPACs:  </label>
+      <input type="text" name="gapbetweenpacs" placeholder="gapbetweenpacs" value="35" required="required">
+      <br>
+      <br>
+      <label for="actionlatency">ActionLatency:  </label>
+      <input type="text" name="actionlatency" placeholder="actionlatency" value="40" required="required">
+      <br>
+      <br>
+      <label for="actionsinpac">ActionsInPAC:  </label>
+      <input type="text" name="actionsinpac" placeholder="actionsinpac" value="5" required="required">
+      <br>
+      <br>
+      <label for="totalmapexplored">TotalMapExplored:  </label>
+      <input type="text" name="totalmapexplored" placeholder="totalmapexplored" value="30" required="required">
+      <br>
+      <br>
+      <label for="workersmade">WorkersMade:  </label>
+      <input type="text" name="workersmade" placeholder="workersmade" value="0.0015" required="required">
+      <br>
+      <br>
+      <label for="uniqueunitsmade">UniqueUnitsMade:  </label>
+      <select id="uniqueunitsmade" name="uniqueunitsmade" placeholder="uniqueunitsmade", required="required">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <br>
+      <br>
+      <label for="complexunitsmade">ComplexUnitsMade:  </label>
+      <input type="text" name="complexunitsmade" placeholder="complexunitsmade" value="0.0001" required="required">
+      <br>
+      <br>
+      <label for="complexabilitiesused">ComplexAbilitiesUSed:  </label>
+      <input type="text" name="complexabilitiesused" placeholder="complexabilitiesused" value="0.0001" required="required">
+      <br>
+      <br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict League Index</button>
+    </form>
+    <br>
+    <br>
+    <h2>
+    {{ prediction_text }}
+    </h2>
+  </div>
+</body>
+</html>
